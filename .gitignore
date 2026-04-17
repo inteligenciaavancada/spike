@@ -1,0 +1,18 @@
+# Credenciais
+.env
+.env.*
+*.key
+*.pem
+credentials*.json
+
+# Runtime
+*.log
+*.tmp
+__pycache__/
+node_modules/
+
+# State
+.spike_last_id
+
+# OS
+.DS_Store
