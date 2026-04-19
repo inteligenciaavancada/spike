@@ -114,9 +114,30 @@ FASE 9 — MARCAR COMO CONCLUIDO
   - Se tem skill criada → verificar se foi publicada no inventario.
   - Se tem monitoramento pendente → criar topico [MONITOR].
 
-FASE 10 — FIM
-  Iniciativa encerrada. Banco atualizado. Topico fechado.
-  Proximo ciclo: se tem [MONITOR], acompanhar KPIs semanais por 4-8 semanas.
+FASE 10 — MONITORAMENTO (4-8 semanas)
+  Criar topico [MONITOR] no Zulip.
+  Cobrar report semanal do dono (KPIs: GOOD >70%, OK 40-70%, BAD <40%).
+  Se semana sem report → cobrar dono. 2 semanas sem report → cobrar CEO.
+
+FASE 11 — REVIEW
+  Apos periodo de monitoramento (4-8 semanas):
+  Postar no topico: "@dono @CEO — periodo de monitoramento encerrado. Reuniao de review."
+  Criar topico [REVIEW] com dados acumulados.
+  Cobrar decisao em 48h.
+
+FASE 12 — KEEP / ADJUST / KILL
+  Superior decide com dados:
+  - KEEP: marco no banco status = permanent. Skill vira processo oficial.
+  - ADJUST: marco status = adjusting. Novo ciclo de 4 semanas. Volto pra Fase 7.
+  - KILL: marco status = killed. Registro motivo. Posto no topico original.
+  
+  Se decisao nao vem em 48h → escalar CEO.
+  Se CEO nao decide em 48h → escalar Founder.
+
+FASE 13 — FIM DEFINITIVO
+  Banco atualizado com status final.
+  Topico original recebe post de fechamento com resultado + link pra skill (se KEEP).
+  Iniciativa encerrada de verdade. Nada pendente.
 ```
 
 ---
@@ -143,6 +164,8 @@ FASE 10 — FIM
 | Execucao (Matrix) | Tasks no prazo | >80% | Task sem update >24h → dono. >48h → CEO |
 | Conclusao | Todas tasks done | Appetite | Atrasado >24h apos prazo |
 | Monitoramento | Report semanal | 100% das semanas | Semana sem report |
+| Review | Reuniao com dados | Apos 4-8 semanas | Sem review >1 semana apos prazo |
+| Keep/Adjust/Kill | Decisao final | <48h apos review | Sem decisao >48h → CEO. >96h → Founder |
 
 ### Escalacao Progressiva
 
